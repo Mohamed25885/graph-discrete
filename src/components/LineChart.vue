@@ -33,10 +33,10 @@ export default {
         let sineAngle = 0;
         let cosineAngle = 0;
         for (let j = 0; j < length; j++) {
-          const sin = sine[j];
-          const cosine = sine[j];
-          cosineAngle += cosine * Math.cos(index * currentAngle);
-          sineAngle += sin * Math.sin(index * currentAngle);
+          const sin = sine[j] ?? 0;
+          const cos = cosine[j] ?? 0;
+          cosineAngle += cos * Math.cos((j + 1) * currentAngle);
+          sineAngle += sin * Math.sin((j + 1) * currentAngle);
         }
         let angle = dc + cosineAngle + sineAngle;
         data.data.push(angle);
