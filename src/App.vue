@@ -1,7 +1,22 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <router-link to="/" class="navbar-brand text-dark"
+      >Signal Processing</router-link
+    >
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <router-link to="/" class="nav-link active text-dark"
+            >Home</router-link
+          >
+        </li>
+        <li class="nav-item active">
+          <router-link to="graph" class="nav-link active text-dark"
+            >Graph</router-link
+          >
+        </li>
+      </ul>
+    </div>
   </nav>
   <router-view />
 </template>
